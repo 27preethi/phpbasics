@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    //The PHP echo statement is often used to output data to the screen.
+$txt = "W3Schools.com";
+echo "I love " . $txt . "!";
+
+//PHP has three different variable scopes:
+
+local
+global
+static
+//local scope[A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function]
+
+function myTest() {
+    $y = 10; // local scope
+    echo "<p>Variable x inside function is: $y</p>";
+}
+myTest();
+
+// using x outside the function will generate an error
+echo "<p>Variable x outside function is: $y</p>";
+
+//global scope[A variable declared outside a function has a GLOBAL SCOPE and can only be accessed outside a function]
+
+$x = 5; // global scope
+
+function myTest() {
+    // using x inside this function will generate an error
+    echo "<p>Variable x inside function is: $x</p>";
+}
+myTest();
+
+echo "<p>Variable x outside function is: $x</p>";
+
+//The switch statement is used to perform different actions based on different conditions.
+
+$favcolor = "red";
+
+switch ($favcolor) {
+    case "red":
+        echo "Your favorite color is red!";
+        break;
+    case "blue":
+        echo "Your favorite color is blue!";
+        break;
+    case "green":
+        echo "Your favorite color is green!";
+        break;
+    default:
+        echo "Your favorite color is neither red, blue, nor green!";
+}
+
+//while loop
+$x = 1;
+
+while($x <= 5) {
+    echo "The number is: $x <br>";
+    $x++;
+}
+
+//for loop
+for ($x = 0; $x <= 100; $x+=10) {
+    echo "The number is: $x <br>";
+}
+
+
+
+
+
+
+?>
+</body>
+</html>
